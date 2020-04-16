@@ -25,9 +25,9 @@
 
     CheckList.prototype.addClickHandler = function (fn) {
         this.$element.on('click', 'input', function (event) {
-          var email = event.target.value;
-          this.removeRow(email);
-          fn(email);
+            var email = event.target.value;
+            this.removeRow(email);
+            fn(email);
         }.bind(this));
     };
 
@@ -44,10 +44,10 @@
 
     CheckList.prototype.removeRow = function (email) {
         this.$element
-          .find('[value="' + email + '"]')
-          .closest('[data-coffee-order="checkbox"]')
-          .remove();
-      };
+            .find('[value="' + email + '"]')
+            .closest('[data-coffee-order="checkbox"]')
+            .remove();
+    };
 
 
     function Row(coffeeOrder) {

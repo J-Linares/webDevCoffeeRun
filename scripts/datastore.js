@@ -1,11 +1,11 @@
 (function (window) {
-    'use strict';
-    // Code will go here
-    var App = window.App || {};
+  'use strict';
+  // Code will go here
+  var App = window.App || {};
 
-    function DataStore() {
-      this.data = {};
-    }
+  function DataStore() {
+    this.data = {};
+  }
 
   DataStore.prototype.add = function (key, val) {
     this.data[key] = val;
@@ -22,7 +22,7 @@
   DataStore.prototype.remove = function (key) {
     delete this.data[key];
   };
-  
-    App.DataStore = DataStore;
-    window.App = App;
-  })(window);
+
+  App.DataStore = DataStore;
+  window.App = App;
+})(window);
